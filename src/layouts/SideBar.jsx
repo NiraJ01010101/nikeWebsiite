@@ -5,6 +5,7 @@ import {
   Home,
   ShoppingCart,
   Contact,
+  Award,
 } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -22,6 +23,12 @@ export default function SideBar() {
       label: "Shoping",
       url: "/shoping",
       icon: <ShoppingCart size={20} />,
+      show: true,
+    },
+    {
+      label: "Reviews",
+      url: "/reviews",
+      icon: <Award size={20} />,
       show: true,
     },
     {

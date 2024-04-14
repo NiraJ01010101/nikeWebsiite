@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { statistics, shoes } from "../../constants";
-import { bigShoe3 } from "../../assets/images";
+import { bigShoe2 } from "../../assets/images";
 import { arrowRight } from "../../assets/icons";
 import { Button } from "../../components";
 
 const Home = () => {
-  const [showImage, setshowImage] = useState(bigShoe3);
+  const [showImage, setshowImage] = useState(bigShoe2);
   return (
     <>
       <section
@@ -36,7 +36,10 @@ const Home = () => {
                 key={index}
                 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
               >
-                <div className="p-4 bg-white shadow-orange rounded-md">
+                <div
+                  className="p-4 bg-white rounded-md"
+                  style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
+                >
                   <div className="flex items-center">
                     <div>
                       <h3 className="text-lg font-semibold">{stat.value}</h3>

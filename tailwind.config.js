@@ -22,6 +22,9 @@ export default {
       boxShadow: {
         orange: "0 4px 3px rgba(255, 152, 0, 0.2)",
       },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      }
     },
   },
   plugins: [],

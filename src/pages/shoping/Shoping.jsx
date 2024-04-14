@@ -1,15 +1,16 @@
-import { products } from "../../constants";
-import { shoe8 } from "../../assets/images";
-import { ProductCard, Button } from "../../components";
+import { products, services } from "../../constants";
+import { shoe8, offer03, offer01, offer02, offer04 } from "../../assets/images";
+import { ProductCard, Button, ServiceCard } from "../../components";
+import { arrowRight } from "../../assets/icons";
 const Shoping = () => {
   return (
     <>
       <section
         id="products"
-        className="flex flex-col justify-center items-center "
+        className="flex flex-col justify-center items-center max-container"
       >
         {/* lg:h-full max-sm:w-full */}
-        <div className="flex flex-col justify-center gap-5 items-center ">
+        <div className="flex flex-col justify-center gap-5 items-center">
           <h2 className="text-4xl font-palanquin font-bold">
             Our <span className="text-coral-red"> Popular </span> Products
           </h2>
@@ -26,7 +27,7 @@ const Shoping = () => {
           ))}
         </div>
 
-        <div className="flex justify-between items-center max-lg:flex-col gap-8 w-full max-container mt-20">
+        <div className="flex justify-between items-center max-lg:flex-col gap-8 w-full mt-20">
           <div className="flex flex-1 flex-col ms-5">
             <h2 className="font-palanquin capitalize text-4xl lg:max-w-lg font-bold">
               We Provide You
@@ -56,6 +57,58 @@ const Shoping = () => {
             />
           </div>
         </div>
+
+        <div className="flex justify-center flex-wrap gap-9 w-full mt-20">
+          {services.map((service) => (
+            <ServiceCard key={service.label} {...service} />
+          ))}
+        </div>
+
+        <section className="flex items-center max-xl:flex-col-reverse max-container mt-20 md:gap-60">
+          <div className="w-1/3 relative">
+            <div className="absolute flex justify-center items-center -right-24 top-1/2 animate-spin-slow ">
+              <img className="w-40 rounded-full" src={offer04} alt="" />
+            </div>
+            <div className="">
+              <div className="flex gap-5">
+                <img className="rounded-lg w-1/2" src={offer01} alt="" />
+                <img className="rounded-lg w-1/2" src={offer02} alt="" />
+              </div>
+              <div className="mt-4">
+                <img
+                  className="rounded-lg w-full bg-black"
+                  src={offer03}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-1/3">
+            <h2 className="text-4xl font-palanquin font-bold">
+              <span className="text-coral-red">Special </span>
+              Offer
+            </h2>
+            <p className="mt-4 info-text">
+              Embark on a shopping journey that redefines your experience with
+              unbeatable deals. From premier selections to incredible savings,
+              we offer unparalleled value that sets us apart.
+            </p>
+            <p className="mt-6 info-text">
+              Navigate a realm of possibilities designed to fulfill your unique
+              desires, surpassing the loftiest expectations. Your journey with
+              us is nothing short of exceptional.
+            </p>
+            <div className="mt-11 flex flex-wrap gap-4">
+              <Button label="Shop now" iconURL={arrowRight} />
+              <Button
+                label="Learn more"
+                backgroundColor="bg-white"
+                borderColor="border-slate-gray"
+                textColor="text-slate-gray"
+              />
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );
