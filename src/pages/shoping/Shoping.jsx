@@ -7,10 +7,10 @@ const Shoping = () => {
     <>
       <section
         id="products"
-        className="flex flex-col justify-center items-center max-container"
+        className="flex flex-col justify-center items-center max-container p-4"
       >
         {/* lg:h-full max-sm:w-full */}
-        <div className="flex flex-col justify-center gap-5 items-center">
+        <div className="flex flex-col justify-center gap-5 items-center ">
           <h2 className="text-4xl font-palanquin font-bold">
             Our <span className="text-coral-red"> Popular </span> Products
           </h2>
@@ -64,7 +64,7 @@ const Shoping = () => {
           ))}
         </div>
 
-        <section className="flex items-center max-xl:flex-col-reverse max-container mt-20 md:gap-60">
+        <section className="flex items-center max-xl:flex-col-reverse max-container p-4 mt-20 md:gap-60">
           <div className="w-1/3 relative">
             <div className="absolute flex justify-center items-center -right-24 top-1/2 animate-spin-slow ">
               <img className="w-40 rounded-full" src={offer04} alt="" />

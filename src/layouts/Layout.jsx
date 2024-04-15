@@ -9,7 +9,7 @@ const Layout = () => {
         <SideBar/>
         <div className="flex flex-col flex-1">
           <NavBar />
-          <div className="flex-1 p-4 min-h-0 overflow-auto bg-white" style={{ height: 'calc(100vh - 60px)' }}>
+          <div className="flex-1 min-h-0 overflow-auto bg-white">
             <Outlet />
           </div>
         </div>
