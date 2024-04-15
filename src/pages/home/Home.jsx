@@ -10,27 +10,29 @@ const Home = () => {
     <>
       <section
         id="home-container"
-        className="w-full flex xl:flex-row flex-col justify-center items-center gap-10 max-container mt-auto p-4 h-full"
+        className="w-full flex xl:flex-row flex-col items-center gap-10 max-container mt-auto p-8"
+        style={{ height: "calc(100vh - 53px)" }}
       >
-        <div className="relative xl:w-2/5 justify-center items-start w-full max-xl:padding-x">
-          <p className="text-xl font-montserrat text-coral-red">
+        <div className="relative xl:w-2/5 justify-center items-start w-full max-xl:padding-x text-center xl:text-left">
+          <p className="text-xl md:text-lg sm:text-base font-montserrat text-coral-red">
             Our Summer collections
           </p>
-          <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
+          <h1 className="mt-10 font-palanquin xl:text-8xl md:text-6xl sm:text-5xl text-4xl max-sm:text-3xl font-bold">
+            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 rounded-md">
               The New Arrival
             </span>
             <br />
             <span className="text-coral-red inline-block mt-4">Nike</span> Shoes
           </h1>
-          <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+          <p className="font-montserrat text-slate-gray xl:text-lg md:text-base sm:text-sm text-xs leading-8 md:leading-6 sm:leading-5 mt-6 mb-14">
             Discover stylish Nike arrivals, quality comfort, and innovation for
             your active life.
           </p>
+          <div className="flex justify-center lg:justify-start">
+            <Button label=" Shop now" iconURL={arrowRight} />
+          </div>
 
-          <Button label="Shop now" iconURL={arrowRight} />
-
-          <div className="flex justify-start items-start flex-wrap w-full mt-16 gap-16">
+          <div className="flex justify-start items-start flex-wrap w-full mt-16 lg:gap-16 gap-8">
             {statistics?.map((stat, index) => (
               <div
                 key={index}
@@ -51,13 +53,13 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="h-full basis-1/2 md:basis-1/2 relative flex-1 flex justify-center items-start max-xl:py-40 bg-hero bg-cover bg-center rounded ">
+        <div className="h-full basis-1/2 md:basis-1/2 relative flex-1 flex justify-center items-start max-lg:pb-48 max-md:pb-20 bg-hero bg-cover bg-center rounded ">
           <img
             src={showImage}
             alt="shoe colletion"
-            width={610}
-            height={502}
-            className="object-contain relative z-10 mt-20 "
+            // width={610}
+            // height={502}
+            className="object-contain relative z-10 lg:mt-20 max-w-full"
           />
 
           <div className="flex sm:gap-6 gap-4 absolute bottom-[2%] sm:left-[10%] max-sm:px-6">

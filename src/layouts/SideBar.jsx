@@ -35,7 +35,7 @@ export default function SideBar() {
       label: "Contact Us",
       url: "/contactUs",
       icon: <Contact size={20} />,
-      show: true,
+      show: false,
     },
   ];
   return (
