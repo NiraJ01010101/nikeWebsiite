@@ -10,10 +10,12 @@ export default {
       },
       colors: {
         primary: "#ECEEFF",
-        "coral-red": "#FF6452",
-        "slate-gray": "#6D6D6D",
-        "pale-blue": "#F5F6FF",
-        "white-400": "rgba(255, 255, 255, 0.80)",
+        // "coral-red": "#FF6452",
+        "coral-red": "rgb(var(--coral-red))",
+        "slate-gray": "rgb(var(--slate-gray))",
+        "pale-blue": "rgb(var(--pale-blue))",
+        "white-400": "rgb(var(--white-400)/ 0.8)",
+        white:'rgb(var(--color-white) / <alpha-value>)',
       },
       backgroundImage: {
         hero: "url('assets/images/collection-background.svg')",
@@ -23,9 +25,10 @@ export default {
         orange: "0 4px 3px rgba(255, 152, 0, 0.2)",
       },
       animation: {
-        'spin-slow': 'spin 8s linear infinite',
-      }
+        "spin-slow": "spin 8s linear infinite",
+      },
     },
   },
+  darkMode: "class",
   plugins: [],
 };

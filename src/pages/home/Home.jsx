@@ -14,17 +14,17 @@ const Home = () => {
         style={{ height: "calc(100vh - 53px)" }}
       >
         <div className="relative xl:w-2/5 justify-center items-start w-full max-xl:padding-x text-center xl:text-left">
-          <p className="text-xl md:text-lg sm:text-base font-montserrat text-coral-red">
+          <p className="text-base md:text-lg sm:text-base font-montserrat text-coral-red">
             Our Summer collections
           </p>
-          <h1 className="mt-10 font-palanquin xl:text-8xl md:text-6xl sm:text-5xl text-4xl max-sm:text-3xl font-bold">
-            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 rounded-md">
+          <h1 className="md:mt-10 font-palanquin xl:text-8xl md:text-6xl sm:text-5xl text-4xl max-sm:text-3xl font-bold dark:text-slate-50">
+            <span className="xl:bg-white xl:whitespace-nowrap relative z-10 md:pr-10 rounded-md ">
               The New Arrival
             </span>
             <br />
-            <span className="text-coral-red inline-block mt-4">Nike</span> Shoes
+            <span className="text-coral-red inline-block md:mt-4">Nike</span> Shoes
           </h1>
-          <p className="font-montserrat text-slate-gray xl:text-lg md:text-base sm:text-sm text-xs leading-8 md:leading-6 sm:leading-5 mt-6 mb-14">
+          <p className="font-poppins text-slate-gray xl:text-lg md:text-base sm:text-sm text-xs md:leading-6 sm:leading-5 mt-3 mb-5 md:mt-6 md:mb-14">
             Discover stylish Nike arrivals, quality comfort, and innovation for
             your active life.
           </p>
@@ -32,14 +32,14 @@ const Home = () => {
             <Button label=" Shop now" iconURL={arrowRight} />
           </div>
 
-          <div className="flex justify-start items-start flex-wrap w-full mt-16 lg:gap-16 gap-8">
+          <div className="flex justify-start items-start flex-wrap w-full md:mt-16 mt-5 lg:gap-16 gap-8 ">
             {statistics?.map((stat, index) => (
               <div
                 key={index}
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 "
               >
                 <div
-                  className="p-4 bg-white rounded-md"
+                  className="p-4 bg-slate-50 rounded-md"
                   style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px" }}
                 >
                   <div className="flex items-center">
@@ -60,7 +60,7 @@ const Home = () => {
             // width={610}
             // height={502}
             className="object-contain relative z-10 lg:mt-20 max-w-full"
-          />
+                    />
 
           <div className="flex sm:gap-6 gap-4 absolute bottom-[2%] sm:left-[10%] max-sm:px-6">
             {shoes?.length !== 0 &&
